@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import "tailwindcss";
+
+/* ============================================
+   CUSTOM THEME — Tailwind v4
+   ============================================ */
+@theme {
+  /* Greens */
+  --color-green: #1B5E20;
+  --color-green-light: #4CAF50;
+  --color-green-dark: #0F3D14;
+
+  /* Gold */
+  --color-gold: #FFB300;
+  --color-gold-dark: #F57C00;
+  --color-gold-soft: #d4ad6d;
+
+  /* Backgrounds */
+  --color-sage: #E8F5E9;
+  --color-cream: #FFF8E1;
+
+  /* Text */
+  --color-charcoal: #263238;
+  --color-muted: #6b756f;
+
+  /* Fonts */
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  /* Shadows */
+  --shadow-soft: 0 8px 30px rgba(27, 94, 32, 0.08);
+  --shadow-card: 0 16px 45px rgba(27, 94, 32, 0.10);
+  --shadow-glow: 0 8px 20px rgba(255, 179, 0, 0.35);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+/* ============================================
+   CUSTOM ANIMATIONS
+   ============================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.05); opacity: 0.9; }
+}
+
+/* Animation utility classes */
+.animate-fade-up    { animation: fadeUp 0.5s ease-out forwards; }
+.animate-fade-in    { animation: fadeIn 0.4s ease-out forwards; }
+.animate-slide-down { animation: slideDown 0.5s ease-out; }
+.animate-float      { animation: float 3s ease-in-out infinite; }
+.animate-pulse-soft { animation: pulseSoft 2s ease-in-out infinite; }   
