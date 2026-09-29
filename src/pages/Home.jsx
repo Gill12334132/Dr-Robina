@@ -24,6 +24,10 @@ import { useState } from "react";
 import productImg from "../imgs/0.jpeg";
 import doctorImg from "../imgs/doctor.png";
 
+// ==================== WHATSAPP ====================
+const WHATSAPP_NUMBER = "923194832686"; // 03194832686
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+
 /* ==================== DATA ==================== */
 const stats = [
   { icon: Users, value: "5,000+", label: "Happy Customers" },
@@ -121,7 +125,7 @@ const faqs = [
   },
   {
     q: "How can I place an order?",
-    a: "You can order directly through WhatsApp by clicking the 'Order on WhatsApp' button, or contact us through our Contact page. We'll confirm your order and guide you through the process.",
+    a: "You can order directly through WhatsApp by clicking the 'Order Now' button, or contact us through our Contact page. We'll confirm your order and guide you through the process.",
   },
 ];
 
@@ -184,7 +188,7 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-3 mt-8">
               <a
-                href="https://wa.me/923194832686"
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2
@@ -193,7 +197,7 @@ export default function Home() {
                            transition-all duration-300
                            hover:bg-gold-dark hover:-translate-y-0.5 hover:shadow-glow"
               >
-                Order on WhatsApp <ArrowRight size={17} />
+                Order Now <ArrowRight size={17} />
               </a>
               <Link
                 to="/product"
@@ -429,7 +433,7 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-3 mt-7">
               <a
-                href="https://wa.me/923194832686"
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2
@@ -438,7 +442,7 @@ export default function Home() {
                            transition-all duration-300
                            hover:bg-green-dark hover:-translate-y-0.5 hover:shadow-card"
               >
-                Order on WhatsApp <ArrowRight size={16} />
+                Order Now <ArrowRight size={16} />
               </a>
               <Link
                 to="/product"
@@ -589,7 +593,7 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-3 justify-center mt-8">
             <a
-              href="https://wa.me/923194832686"
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2
@@ -598,7 +602,7 @@ export default function Home() {
                          transition-all duration-300
                          hover:bg-gold-dark hover:-translate-y-0.5 hover:shadow-glow"
             >
-              Order on WhatsApp <ArrowRight size={17} />
+              Order Now <ArrowRight size={17} />
             </a>
             <Link
               to="/contact"

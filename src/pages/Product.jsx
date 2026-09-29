@@ -5,6 +5,10 @@ import { ArrowRight, Leaf, Clock, ShieldCheck, Truck } from "lucide-react";
 import product500 from "../imgs/K.jpeg";
 import product300 from "../imgs/L.jpeg";
 
+/* ==================== WHATSAPP ==================== */
+const WHATSAPP_NUMBER = "923194832686"; // 03194832686
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+
 /* ==================== INGREDIENTS ==================== */
 const ingredients = [
   { name: "Psyllium Husk", icon: "🌾" },
@@ -137,7 +141,7 @@ export default function Product() {
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                      href={`https://wa.me/923194832686?text=Hi, I want to order Weight Loss by Rubina (${product.weight}) - Rs. ${product.price}`}
+                      href={`${WHATSAPP_LINK}?text=Hi, I want to order Weight Loss by Rubina (${product.weight}) - Rs. ${product.price}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center gap-2
@@ -147,7 +151,7 @@ export default function Product() {
                                  hover:bg-green-dark hover:-translate-y-0.5
                                  hover:shadow-glow"
                     >
-                      Order on WhatsApp
+                      Order Now
                     </a>
                     <Link
                       to="/contact"
@@ -322,7 +326,7 @@ export default function Product() {
           </div>
 
           <a
-            href="https://wa.me/923194832686"
+            href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 shrink-0
@@ -333,7 +337,7 @@ export default function Product() {
                        hover:shadow-glow animate-fade-up"
             style={{ animationDelay: "120ms" }}
           >
-            Order on WhatsApp <ArrowRight size={17} />
+            Order Now <ArrowRight size={17} />
           </a>
         </div>
       </section>

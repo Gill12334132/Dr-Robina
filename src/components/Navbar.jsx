@@ -57,7 +57,7 @@ export default function Navbar() {
           <span className="flex flex-col leading-tight">
             <span className="text-[17px] md:text-[18px] font-extrabold text-green-dark
                              transition-colors duration-300 group-hover:text-gold-dark">
-              Weight Loss
+              Organic Picks
             </span>
             <span className="text-[12px] md:text-[13px] font-semibold text-gold-dark
                              tracking-wide">
